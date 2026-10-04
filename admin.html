@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Painel Administrativo | Madeira & Arte
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/favicon.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <section id="login">
+
+        <div class="login-marca">
+
+            <a
+                href="index.html"
+                class="logo-login"
+            >
+                <img
+                    src="assets/logo.png"
+                    alt="Madeira & Arte"
+                >
+            </a>
+
+
+            <div class="login-apresentacao">
+
+                <span class="etiqueta">
+                    MADEIRA & ARTE
+                </span>
+
+                <h1>
+                    O controle da oficina em um só lugar.
+                </h1>
+
+                <p>
+                    Cadastre peças, projetos,
+                    etapas da criação e rifas.
+                </p>
+
+            </div>
+
+
+            <p class="login-rodape">
+                Painel administrativo
+            </p>
+
+        </div>
+
+
+        <div class="login-conteudo">
+
+            <div class="login-caixa">
+
+                <span class="etiqueta">
+                    ACESSO RESTRITO
+                </span>
+
+                <h2>
+                    Bem-vindo.
+                </h2>
+
+                <p class="login-descricao">
+                    Entre com sua conta de administrador.
+                </p>
+
+
+                <form id="form-login">
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-principal botao-login"
+                    >
+                        Entrar no painel
+                    </button>
+
+
+                    <span id="mensagem-login"></span>
+
+                </form>
+
+
+                <a
+                    href="index.html"
+                    class="voltar-site"
+                >
+                    ← Voltar para o site
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAINEL -->
+
+    <section
+        id="painel"
+        class="oculto"
+    >
+
+        <!-- MENU LATERAL -->
+
+        <aside
+            id="menu-admin"
+            class="menu-admin"
+        >
+
+            <div class="marca-admin">
+
+                <img
+                    src="assets/logo.png"
+                    alt="Madeira & Arte"
+                >
+
+                <button
+                    id="fechar-menu"
+                    type="button"
+                    aria-label="Fechar menu"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <p class="menu-titulo">
+                ADMINISTRAÇÃO
+            </p>
+
+
+            <nav>
+
+                <button
+                    class="menu-link ativo"
+                    data-pagina="visao-geral"
+                    type="button"
+                >
+                    Visão geral
+                </button>
+
+
+                <button
+                    class="menu-link"
+                    data-pagina="pecas"
+                    type="button"
+                >
+                    Peças
+                </button>
+
+
+                <button
+                    class="menu-link"
+                    data-pagina="projetos"
+                    type="button"
+                >
+                    Projetos
+                </button>
+
+
+                <button
+                    class="menu-link"
+                    data-pagina="criacao-admin"
+                    type="button"
+                >
+                    Criação
+                </button>
+
+
+                <button
+                    class="menu-link"
+                    data-pagina="rifas"
+                    type="button"
+                >
+                    Rifas
+                </button>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a
+                    href="index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ver site
+                </a>
+
+
+                <button
+                    id="sair"
+                    type="button"
+                >
+                    Sair da conta
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <div
+            id="fundo-menu"
+            class="fundo-menu"
+        ></div>
+
+
+        <!-- CONTEÚDO -->
+
+        <div class="area-admin">
+
+            <header class="topo-admin">
+
+                <button
+                    id="abrir-menu"
+                    type="button"
+                    aria-label="Abrir menu"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <strong>
+                        Madeira & Arte
+                    </strong>
+
+                    <span>
+                        Painel administrativo
+                    </span>
+
+                </div>
+
+
+                <div class="usuario-admin">
+                    AS
+                </div>
+
+            </header>
+
+
+            <main class="conteudo-admin">
+
+                <!-- VISÃO GERAL -->
+
+                <section
+                    id="visao-geral"
+                    class="pagina-admin ativa"
+                >
+
+                    <div class="cabecalho-pagina">
+
+                        <div>
+
+                            <span class="etiqueta">
+                                PAINEL
+                            </span>
+
+                            <h1>
+                                Olá, Alexandre.
+                            </h1>
+
+                            <p>
+                                Acompanhe e gerencie o conteúdo
+                                da Madeira & Arte.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="atalho-nova-peca"
+                            class="botao-principal"
+                            type="button"
+                        >
+                            + Nova peça
+                        </button>
+
+                    </div>
+
+
+                    <div class="resumo-admin">
+
+                        <article>
+
+                            <span>
+                                PEÇAS DISPONÍVEIS
+                            </span>
+
+                            <strong id="total-disponiveis">
+                                0
+                            </strong>
+
+                            <small>
+                                prontas para venda
+                            </small>
+
+                        </article>
+
+
+                        <article>
+
+                            <span>
+                                RESERVADAS
+                            </span>
+
+                            <strong id="total-reservadas">
+                                0
+                            </strong>
+
+                            <small>
+                                aguardando conclusão
+                            </small>
+
+                        </article>
+
+
+                        <article>
+
+                            <span>
+                                PROJETOS
+                            </span>
+
+                            <strong id="total-projetos">
+                                0
+                            </strong>
+
+                            <small>
+                                no portfólio
+                            </small>
+
+                        </article>
+
+
+                        <article>
+
+                            <span>
+                                ETAPAS DA CRIAÇÃO
+                            </span>
+
+                            <strong id="total-criacao">
+                                0
+                            </strong>
+
+                            <small>
+                                ativas no site
+                            </small>
+
+                        </article>
+
+
+                        <article>
+
+                            <span>
+                                RIFA ATIVA
+                            </span>
+
+                            <strong
+                                id="status-rifa"
+                                class="texto-status"
+                            >
+                                Não
+                            </strong>
+
+                            <small>
+                                publicada no site
+                            </small>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="painel-bloco">
+
+                        <div class="painel-bloco-topo">
+
+                            <div>
+
+                                <span class="etiqueta">
+                                    RECENTES
+                                </span>
+
+                                <h2>
+                                    Últimos cadastros
+                                </h2>
+
+                            </div>
+
+
+                            <button
+                                id="ver-todas-pecas"
+                                type="button"
+                                class="botao-texto"
+                            >
+                                Ver peças →
+                            </button>
+
+                        </div>
+
+
+                        <div id="ultimos-cadastros"></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PEÇAS -->
+
+                <section
+                    id="pecas"
+                    class="pagina-admin"
+                >
+
+                    <div class="cabecalho-pagina">
+
+                        <div>
+
+                            <span class="etiqueta">
+                                CATÁLOGO
+                            </span>
+
+                            <h1>
+                                Peças
+                            </h1>
+
+                            <p>
+                                Gerencie peças disponíveis,
+                                reservadas e ocultas.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="nova-peca"
+                            class="botao-principal"
+                            type="button"
+                        >
+                            + Nova peça
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="lista-admin-pecas"
+                        class="grade-admin"
+                    ></div>
+
+                </section>
+
+
+                <!-- PROJETOS -->
+
+                <section
+                    id="projetos"
+                    class="pagina-admin"
+                >
+
+                    <div class="cabecalho-pagina">
+
+                        <div>
+
+                            <span class="etiqueta">
+                                PORTFÓLIO
+                            </span>
+
+                            <h1>
+                                Projetos realizados
+                            </h1>
+
+                            <p>
+                                Peças vendidas, encomendas
+                                e trabalhos concluídos.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="novo-projeto"
+                            class="botao-principal"
+                            type="button"
+                        >
+                            + Novo projeto
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="lista-admin-projetos"
+                        class="grade-admin"
+                    ></div>
+
+                </section>
+
+
+                <!-- CRIAÇÃO -->
+
+                <section
+                    id="criacao-admin"
+                    class="pagina-admin"
+                >
+
+                    <div class="cabecalho-pagina">
+
+                        <div>
+
+                            <span class="etiqueta">
+                                PROCESSO ARTESANAL
+                            </span>
+
+                            <h1>
+                                Criação
+                            </h1>
+
+                            <p>
+                                Cadastre as etapas do processo
+                                que aparecem no carrossel do site.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="nova-etapa"
+                            class="botao-principal"
+                            type="button"
+                        >
+                            + Nova etapa
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="lista-admin-criacao"
+                        class="grade-admin"
+                    ></div>
+
+                </section>
+
+
+                <!-- RIFAS -->
+
+                <section
+                    id="rifas"
+                    class="pagina-admin"
+                >
+
+                    <div class="cabecalho-pagina">
+
+                        <div>
+
+                            <span class="etiqueta">
+                                SORTEIOS
+                            </span>
+
+                            <h1>
+                                Rifas
+                            </h1>
+
+                            <p>
+                                Cadastre e controle as rifas
+                                divulgadas no site.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="nova-rifa"
+                            class="botao-principal"
+                            type="button"
+                        >
+                            + Nova rifa
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="lista-admin-rifas"
+                        class="grade-admin"
+                    ></div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL PEÇA -->
+
+    <div
+        id="modal-peca"
+        class="modal-admin"
+    >
+
+        <div class="modal-caixa modal-grande">
+
+            <div class="modal-topo">
+
+                <div>
+
+                    <span class="etiqueta">
+                        CATÁLOGO
+                    </span>
+
+                    <h2 id="titulo-modal-peca">
+                        Nova peça
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="fechar-modal"
+                    data-fechar="modal-peca"
+                    type="button"
+                    aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-peca">
+
+                <input
+                    type="hidden"
+                    id="peca-id"
+                >
+
+
+                <div class="campo">
+
+                    <label for="nome-peca">
+                        Nome da peça
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome-peca"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="linha-form">
+
+                    <div class="campo">
+
+                        <label for="categoria-peca">
+                            Categoria
+                        </label>
+
+                        <select
+                            id="categoria-peca"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Tábua">
+                                Tábua
+                            </option>
+
+                            <option value="Gamela">
+                                Gamela
+                            </option>
+
+                            <option value="Mesa">
+                                Mesa
+                            </option>
+
+                            <option value="Outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="status-peca">
+                            Status
+                        </label>
+
+                        <select
+                            id="status-peca"
+                            required
+                        >
+
+                            <option value="disponivel">
+                                Disponível
+                            </option>
+
+                            <option value="reservada">
+                                Reservada
+                            </option>
+
+                            <option value="vendida">
+                                Vendida
+                            </option>
+
+                            <option value="projeto">
+                                Projeto realizado
+                            </option>
+
+                            <option value="oculta">
+                                Oculta
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricao-peca">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricao-peca"
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="linha-form">
+
+                    <div class="campo">
+
+                        <label for="preco-peca">
+                            Preço à vista
+                        </label>
+
+                        <input
+                            type="number"
+                            id="preco-peca"
+                            min="0"
+                            step="0.01"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="parcelamento-peca">
+                            Parcelamento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="parcelamento-peca"
+                            placeholder="Ex: 3x de R$ 65,00"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="area-fotos-existentes"
+                    class="area-fotos-existentes oculto"
+                >
+
+                    <label>
+                        Fotos atuais
+                    </label>
+
+                    <div
+                        id="fotos-existentes"
+                        class="fotos-existentes"
+                    ></div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fotos-peca">
+                        Adicionar fotos
+                    </label>
+
+                    <div class="campo-arquivo">
+
+                        <input
+                            type="file"
+                            id="fotos-peca"
+                            accept="image/*"
+                            multiple
+                        >
+
+                        <span>
+                            JPG, PNG ou WEBP • até 6 MB por foto
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-form">
+
+                    <button
+                        type="button"
+                        class="botao-secundario fechar-peca"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                        id="salvar-peca"
+                    >
+                        Salvar peça
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL CRIAÇÃO -->
+
+    <div
+        id="modal-etapa"
+        class="modal-admin"
+    >
+
+        <div class="modal-caixa modal-grande">
+
+            <div class="modal-topo">
+
+                <div>
+
+                    <span class="etiqueta">
+                        PROCESSO ARTESANAL
+                    </span>
+
+                    <h2 id="titulo-modal-etapa">
+                        Nova etapa
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="fechar-modal"
+                    data-fechar="modal-etapa"
+                    type="button"
+                    aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-etapa">
+
+                <input
+                    type="hidden"
+                    id="etapa-id"
+                >
+
+
+                <div class="campo">
+
+                    <label for="titulo-etapa">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo-etapa"
+                        placeholder="Ex: Escolha da madeira"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricao-etapa">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricao-etapa"
+                        rows="5"
+                        placeholder="Explique o que acontece nesta etapa..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="linha-form">
+
+                    <div class="campo">
+
+                        <label for="ordem-etapa">
+                            Ordem
+                        </label>
+
+                        <input
+                            type="number"
+                            id="ordem-etapa"
+                            min="1"
+                            step="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo campo-check">
+
+                        <label>
+                            Exibição
+                        </label>
+
+
+                        <label class="alternador">
+
+                            <input
+                                type="checkbox"
+                                id="ativo-etapa"
+                                checked
+                            >
+
+                            <span class="alternador-visual"></span>
+
+                            <span>
+                                Mostrar no site
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="foto-etapa-atual"
+                    class="area-fotos-existentes oculto"
+                >
+
+                    <label>
+                        Foto atual
+                    </label>
+
+                    <div
+                        id="preview-etapa"
+                        class="preview-etapa"
+                    ></div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="foto-etapa">
+                        Foto da etapa
+                    </label>
+
+                    <div class="campo-arquivo">
+
+                        <input
+                            type="file"
+                            id="foto-etapa"
+                            accept="image/*"
+                        >
+
+                        <span>
+                            Ao editar, selecione uma nova foto
+                            somente se quiser substituir a atual.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-form">
+
+                    <button
+                        type="button"
+                        class="botao-secundario fechar-etapa"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                        id="salvar-etapa"
+                    >
+                        Salvar etapa
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL RIFA -->
+
+    <div
+        id="modal-rifa"
+        class="modal-admin"
+    >
+
+        <div class="modal-caixa modal-grande">
+
+            <div class="modal-topo">
+
+                <div>
+
+                    <span class="etiqueta">
+                        SORTEIOS
+                    </span>
+
+                    <h2 id="titulo-modal-rifa">
+                        Nova rifa
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="fechar-modal"
+                    data-fechar="modal-rifa"
+                    type="button"
+                    aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="form-rifa">
+
+                <input
+                    type="hidden"
+                    id="rifa-id"
+                >
+
+
+                <div class="campo">
+
+                    <label for="titulo-rifa">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo-rifa"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricao-rifa">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricao-rifa"
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="linha-form">
+
+                    <div class="campo">
+
+                        <label for="valor-rifa">
+                            Valor do número
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valor-rifa"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="link-rifa">
+                            Link da rifa
+                        </label>
+
+                        <input
+                            type="url"
+                            id="link-rifa"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <label class="alternador alternador-rifa">
+
+                    <input
+                        type="checkbox"
+                        id="rifa-ativa"
+                    >
+
+                    <span class="alternador-visual"></span>
+
+                    <span>
+                        Deixar esta rifa ativa no site
+                    </span>
+
+                </label>
+
+
+                <div
+                    id="area-fotos-rifa"
+                    class="area-fotos-existentes oculto"
+                >
+
+                    <label>
+                        Fotos atuais
+                    </label>
+
+                    <div
+                        id="fotos-rifa-existentes"
+                        class="fotos-existentes"
+                    ></div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fotos-rifa">
+                        Adicionar fotos
+                    </label>
+
+                    <div class="campo-arquivo">
+
+                        <input
+                            type="file"
+                            id="fotos-rifa"
+                            accept="image/*"
+                            multiple
+                        >
+
+                        <span>
+                            Você pode selecionar várias imagens.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-form">
+
+                    <button
+                        type="button"
+                        class="botao-secundario fechar-rifa"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                        id="salvar-rifa"
+                    >
+                        Salvar rifa
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONFIRMAÇÃO -->
+
+    <div
+        id="modal-confirmacao"
+        class="modal-admin"
+    >
+
+        <div class="modal-caixa modal-confirmacao">
+
+            <div class="icone-aviso">
+                !
+            </div>
+
+            <h2>
+                Confirmar exclusão
+            </h2>
+
+            <p id="texto-confirmacao">
+                Tem certeza?
+            </p>
+
+
+            <div class="acoes-confirmacao">
+
+                <button
+                    id="cancelar-confirmacao"
+                    class="botao-secundario"
+                    type="button"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    id="confirmar-exclusao"
+                    class="botao-perigo"
+                    type="button"
+                >
+                    Excluir
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
